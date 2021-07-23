@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/whole_sheet_bg"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_peekHeight = "55dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:background="@drawable/header_media_bg"
+        android:padding="7dp"
+        >
+        <ImageView
+            android:id="@+id/bottom_sheet_header_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/player_header_icon"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="4"
+            />
+        <TextView
+            android:id="@+id/bottom_sheet_header_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Media Player"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans_light"
+            android:layout_weight="3"
+            />
+        <TextView
+            android:id="@+id/bottom_sheet_header_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Not Playing"
+            android:padding="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans_light"
+            android:layout_weight="3"
+            android:textAlignment="textEnd"
+            android:gravity="end"
+            android:layout_marginRight="10dp" />
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/file_name"
+        android:text="File name"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_sheet_body"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_sheet_body"
+        app:layout_constraintTop_toBottomOf="@id/file_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player_back"
+            android:src="@drawable/player_back_btn"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_weight="4"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player_pause"
+            android:src="@drawable/player_play_btn"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_weight="4"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player_forward"
+            android:src="@drawable/player_forward_btn"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_weight="4"
+            />
+
+        =
+    </LinearLayout>
+    <SeekBar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/media_seekBar"
+        app:layout_constraintTop_toBottomOf="@id/bottom_sheet_body"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="32dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
