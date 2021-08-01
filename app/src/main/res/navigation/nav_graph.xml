@@ -11,9 +11,14 @@
         android:label="fragment_record"
         tools:layout="@layout/fragment_record" >
         <action
+            app:exitAnim="@anim/fade_out"
+            app:enterAnim="@anim/slide_in"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
             android:id="@+id/action_recordFragment_to_listFragment"
             app:destination="@id/listFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.recordy.ListFragment"
